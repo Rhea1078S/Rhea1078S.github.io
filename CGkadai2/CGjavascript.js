@@ -69,7 +69,6 @@ var init = function() {
     camera.position.y = 10;
     camera.rotation.x = -0.15;
   
-    // ‰‰ñÀs
     var update = function() {
         requestAnimationFrame(update);
   
