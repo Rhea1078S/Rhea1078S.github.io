@@ -17,6 +17,7 @@ var init = function() {
  // テクスチャー読み込み
  var textureLoader = new THREE.TextureLoader();  
   var texture = textureLoader.load("nuko2.jpg");
+  var texture2 = textureLoader.load("kegawa.jpg");
   var mat = new THREE.MeshPhongMaterial();
   mat.map = texture;
 
@@ -27,7 +28,7 @@ var init = function() {
   var box = new THREE.Mesh(geometry, mat);
   box.position.z = -5;
   box.position.x = -2;
-  scene.add(box);
+ 
 
  // 球を作成
 　var sphereGeometry = new THREE.SphereGeometry( 0.8, 32, 32 ); 
