@@ -34,6 +34,7 @@ var init = function() {
   box.rotate.x = -40;
   box.position.y = 0.5;
   box.position.x = -0.3;
+  scene.add( box );
   
  
 
