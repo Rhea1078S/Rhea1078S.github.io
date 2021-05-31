@@ -20,14 +20,21 @@ var init = function() {
   var texture2 = textureLoader.load("kegawa.jpg");
   var mat = new THREE.MeshPhongMaterial();
   mat.map = texture;
+  var mat2 = new THREE.MeshPhongMaterial();
+  mat2.map = texture2;
+
 
   // 箱を作成
-  var geometry = new THREE.BoxGeometry(1, 1, 1);
+ 
+    
+  var geometry = new THREE.BoxGeometry(0.3, 0.3, 0.3);
   //var material = new THREE.MeshPhongMaterial({ color: 0xffffff });
   //var box = new THREE.Mesh(geometry, material);
-  var box = new THREE.Mesh(geometry, mat);
-  box.position.z = -5;
-  box.position.x = -2;
+  var box = new THREE.Mesh(geometry, mat2);
+  box.rotate.x = -40;
+  box.position.y = 0.5;
+  box.position.x = -0.3;
+  
  
 
  // 球を作成
