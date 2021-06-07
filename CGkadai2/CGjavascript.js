@@ -19,7 +19,7 @@ var init = function() {
 	const controls = new THREE.OrbitControls(camera,document.body);
 	
 	var textureLoader = new THREE.TextureLoader();  
-        var texture = textureLoader.load("/earth.png");
+        var texture = textureLoader.load("earth.png");
         var mat = new THREE.MeshPhongMaterial();
         mat.map = texture;
 
