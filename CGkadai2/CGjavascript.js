@@ -17,6 +17,11 @@ var init = function() {
 	
 	camera.position.set(0, 0, 1000);
 	const controls = new THREE.OrbitControls(camera,document.body);
+	
+	var textureLoader = new THREE.TextureLoader();  
+        var texture = textureLoader.load("/earth.png");
+        var mat = new THREE.MeshPhongMaterial();
+        mat.map = texture;
 
     var sungeometry = new THREE.SphereGeometry( 10, 16, 16 );
     var sunmaterial = new THREE.MeshBasicMaterial( {color: 0xff6600} );
