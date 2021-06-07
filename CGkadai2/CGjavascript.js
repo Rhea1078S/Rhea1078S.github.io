@@ -49,7 +49,7 @@ var init = function() {
 
     var earthgeometry = new THREE.SphereGeometry( 3, 16, 16 );
     var earthmaterial = new THREE.MeshStandardMaterial( {color: 0x00ffff} );
-    var earth = new THREE.Mesh( earthgeometry, earthmaterial );
+    var earth = new THREE.Mesh( earthgeometry, mat );
     earth.castShadow = true;
     earth.receiveShadow = true;
     earth.position.set(0,0,40);
