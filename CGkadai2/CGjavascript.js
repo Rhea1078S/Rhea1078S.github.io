@@ -12,6 +12,9 @@ var init = function() {
 	var scene = new THREE.Scene();
 
 	var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
+	
+	camera.position.set(0, 0, 1000);
+	const controls = new THREE.OrbitControls(camera,document.body);
 
     var sungeometry = new THREE.SphereGeometry( 10, 16, 16 );
     var sunmaterial = new THREE.MeshBasicMaterial( {color: 0xff6600} );
@@ -68,6 +71,14 @@ var init = function() {
     camera.position.z = 80;
     camera.position.y = 10;
     camera.rotation.x = -0.15;
+	
+	tick();
+        // 毎フレーム時に実行されるループイベントです
+        function tick() {
+          // レンダリング
+          renderer.render(scene, camera);
+          requestAnimationFrame(tick);
+        }
   
     var update = function() {
         requestAnimationFrame(update);
