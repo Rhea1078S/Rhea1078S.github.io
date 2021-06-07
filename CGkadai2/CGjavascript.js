@@ -8,6 +8,7 @@ var init = function() {
           canvas: document.querySelector('#myCanvas')
         });
 	renderer.setSize(width, height);
+	renderer.setClearColor(0x060006);
     document.body.appendChild(renderer.domElement);
     renderer.shadowMap.enabled = true;
 
