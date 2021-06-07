@@ -4,7 +4,9 @@ var init = function() {
 
 	var width = 1000, height = 800;
 
-	var renderer = new THREE.WebGLRenderer();
+	const renderer = new THREE.WebGLRenderer({
+          canvas: document.querySelector('#myCanvas')
+        });
 	renderer.setSize(width, height);
     document.body.appendChild(renderer.domElement);
     renderer.shadowMap.enabled = true;
