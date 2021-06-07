@@ -101,6 +101,7 @@ var init = function() {
         sun2.rotation.x += 1;
         sun2.rotation.y += 1;
         sun2.rotation.z += 1;
+	earth.rotation.y += 0.01;
     };
     update();
 }
